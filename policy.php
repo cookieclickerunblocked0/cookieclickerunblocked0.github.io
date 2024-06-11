@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head id="dynamic-header"></head>
-
-
-  <body id="page-top" style="background: url('images/background.png'); background-size: cover;>
+<?php
+$pageTitle = "Privacy Policy";
+$pageDescription = "Privacy Policy Page for cookieclickerunblocked0.github.io";
+include 'header.php';
+?>
     		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
 			<div class="container">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,32 +139,6 @@
     </div>
   </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Create a temporary element to hold the fetched HTML
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = data;
-
-                    // Move the head content from tempDiv to the actual head
-                    while (tempDiv.firstChild) {
-                        document.getElementById('dynamic-header').appendChild(tempDiv.firstChild);
-                    }
-
-                    // Now the elements should be available
-                    document.getElementById('page-title').innerText = "Privacy Policy - cookieclickerunblocked0.github.io";
-                    document.getElementById('page-description').setAttribute("content", "Privacy Policy for cookieclickerunblocked0.github.io");
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
-    </script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/jquery-3.6.2.min.js"></script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/popper.min.js"></script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/bootstrap.min.js"></script>

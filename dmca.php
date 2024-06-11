@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.documentElement.innerHTML = data + document.documentElement.innerHTML;
-                document.getElementById('page-title').innerText = "DMCA - cookieclickerunblocked0.github.io";
-
-            });
-    </script>
-</head>
-
-  <body id="page-top" style="background: url('images/background.png'); background-size: cover;>
+<?php
+$pageTitle = "DMCA";
+$pageDescription = "DMCA Page for cookieclickerunblocked0.github.io";
+include 'header.php';
+?>
     <!-- Navigation-->
 		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
 			<div class="container">
