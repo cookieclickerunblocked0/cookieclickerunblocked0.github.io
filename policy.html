@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.documentElement.innerHTML = data + document.documentElement.innerHTML;
-                document.getElementById('page-title').innerText = "Privacy Policy - cookieclickerunblocked0.github.io";
+<head id="dynamic-header"></head>
 
-            });
-    </script>
-</head>
 
   <body id="page-top" style="background: url('images/background.png'); background-size: cover;>
     		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
@@ -148,6 +139,17 @@
        <a href="https://cookieclickerunblocked0.github.io/term.html">Term</a> - <a href="https://cookieclickerunblocked0.github.io/dmca.html">DMCA</a> - <a href="https://cookieclickerunblocked0.github.io/policy.html">Policy</a>
     </div>
   </div>
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('dynamic-header').innerHTML = data;
+                    document.getElementById('page-title').innerText = "Privacy Policy - cookieclickerunblocked0.github.io";
+                    document.getElementById('page-description').setAttribute("content", "Privacy Policy for cookieclickerunblocked0.github.io");
+                });
+        });
+    </script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/jquery-3.6.2.min.js"></script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/popper.min.js"></script>
   <script type="text/javascript" src="https://cookieclickerunblocked0.github.io/js/bootstrap.min.js"></script>
